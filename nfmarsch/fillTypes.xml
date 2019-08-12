@@ -127,6 +127,17 @@
 			<de>Zucker</de>
 			<fr>ZUCKER</fr>
 		</text>
-		
+		<text name="BRETTERPALLET">
+			<cz>BRETTERPALLET</cz>
+			<en>BRETTERPALLET</en>
+			<de>Bretterpalette</de>
+			<fr>BRETTERPALLET</fr>
+		</text>
+		<text name="LEERPALLET">
+			<cz>LEERPALLET</cz>
+			<en>LEERPALLET</en>
+			<de>Leerpalette</de>
+			<fr>LEERPALLET</fr>
+		</text>
 	</l10n>
 </mapconfig>
