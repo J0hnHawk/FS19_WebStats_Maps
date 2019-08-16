@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<pallets>
+		<pallet name="kirschePallet" />
+	</pallets>
+	<l10n>
+		<text name="FS19_FEDmods_Kirsche">
+			<de>Kirschplantage</de>
+		</text>
+		<text name="KIRSCHE">
+			<de>Kirsche</de>
+		</text>
+		<text name="OP_KIRSCHE">
+			<de>Kirsche</de>
+		</text>
+	</l10n>
+</mapconfig>

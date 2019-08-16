@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<l10n>
+		<text name="FS19_FEDmods_Diesel">
+			<de>Dieselherstellung</de>
+		</text>
+		<text name="OP_DIESEL">
+			<de>Diesel</de>
+		</text>
+		<text name="OP_COMPOST">
+			<de>Kompost</de>
+		</text>
+	</l10n>
+</mapconfig>

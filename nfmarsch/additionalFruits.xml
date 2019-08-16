@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<l10n>
+		<text name="TRITICALE">
+			<de>Triticale</de>
+		</text>
+		<text name="POPPY">
+			<de>Mohn</de>
+		</text>
+		<text name="MILLET">
+			<de>Hirse</de>
+		</text>
+		<text name="TOBACCO">
+			<de>Tabak</de>
+		</text>
+		<text name="RYE">
+			<de>Roggen</de>
+		</text>
+		<text name="CARROT">
+			<de>Karotte</de>
+		</text>
+		<text name="HOPS">
+			<de>Hopfen</de>
+		</text>
+		<text name="ONION">
+			<de>Zwiebel</de>
+		</text>
+		<text name="SORGHUM">
+			<de>Sorghumhirse</de>
+		</text>
+		<text name="SPELT">
+			<de>Dinkel</de>
+		</text>
+	</l10n>
+</mapconfig>

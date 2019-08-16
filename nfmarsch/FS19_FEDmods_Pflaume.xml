@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<pallets>
+		<pallet name="pflaumePallet" />
+	</pallets>
+	<l10n>
+		<text name="FS19_FEDmods_Pflaume">
+			<de>Pflaumenplantage</de>
+		</text>
+		<text name="PFLAUME">
+			<de>Pflaume</de>
+		</text>
+		<text name="OP_PFLAUME">
+			<de>Pflaume</de>
+		</text>
+	</l10n>
+</mapconfig>

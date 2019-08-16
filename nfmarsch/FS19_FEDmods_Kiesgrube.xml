@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<l10n>
+		<text name="FS19_FEDmods_Kiesgrube">
+			<de>Kiesgrube</de>
+		</text>
+		<text name="OP_KIES">
+			<de>Kies</de>
+		</text>
+		<text name="OP_SAND">
+			<de>Sand</de>
+		</text>
+	</l10n>
+</mapconfig>

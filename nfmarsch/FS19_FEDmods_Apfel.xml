@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+	<pallets>
+		<pallet name="apfelPallet" />
+	</pallets>
+	<l10n>
+		<text name="FS19_FEDmods_Apfel">
+			<de>Apfelplantage</de>
+		</text>
+		<text name="APFEL">
+			<de>Apfel</de>
+		</text>
+		<text name="OP_APFEL">
+			<de>Apfel</de>
+		</text>
+	</l10n>
+</mapconfig>
