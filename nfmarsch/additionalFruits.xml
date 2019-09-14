@@ -1,35 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
 	<l10n>
-		<text name="TRITICALE">
-			<de>Triticale</de>
-		</text>
-		<text name="POPPY">
-			<de>Mohn</de>
-		</text>
-		<text name="MILLET">
-			<de>Hirse</de>
-		</text>
-		<text name="TOBACCO">
-			<de>Tabak</de>
-		</text>
-		<text name="RYE">
-			<de>Roggen</de>
-		</text>
-		<text name="CARROT">
-			<de>Karotte</de>
-		</text>
 		<text name="HOPS">
+			<en>Hops</en>
 			<de>Hopfen</de>
 		</text>
-		<text name="ONION">
-			<de>Zwiebel</de>
+		<text name="CARROT">
+			<en>Carrots</en>
+			<de>Karotten</de>
 		</text>
-		<text name="SORGHUM">
-			<de>Sorghumhirse</de>
+		<text name="ONION">
+			<en>Onions</en>
+			<de>Zwiebeln</de>
+		</text>
+		<text name="CARROT_HAULM">
+			<en>carrot haulm</en>
+			<de>Karottenkraut</de>
+		</text>
+		<text name="RYE">
+			<en>Rye</en>
+			<de>Roggen</de>
+		</text>
+		<text name="POPPY">
+			<en>Poppy</en>
+			<de>Mohn</de>
 		</text>
 		<text name="SPELT">
+			<en>Spelt</en>
 			<de>Dinkel</de>
+		</text>
+		<text name="MILLET">
+			<en>Millet</en>
+			<de>Hirse</de>
+		</text>
+		<text name="ALFALFA">
+			<en>alfalfa</en>
+			<de>Luzerne</de>
+		</text>
+		<text name="SORGHUM">
+			<en>Sorghum</en>
+			<de>SorghumHirse</de>
+		</text>
+		<text name="TRITICALE">
+			<en>triticale</en>
+			<de>Mischgetreide</de>
+		</text>
+		<text name="TOBACCO">
+			<en>Tobacco</en>
+			<de>Tabak</de>
+		</text>
+		<text name="COMPOST">
+			<en>compost</en>
+			<de>Kompost</de>
+		</text>
+		<text name="MEHL">
+			<en>flour</en>
+			<de>Mehl</de>
+		</text>
+		<text name="ZUCKER">
+			<en>sugar</en>
+			<de>Zucker</de>
+		</text>
+		<text name="PELLETS">
+			<en>pellets</en>
+			<de>Pellets</de>
+		</text>
+		<text name="SAND">
+			<en>sand</en>
+			<de>Sand</de>
+		</text>
+		<text name="ERDE">
+			<en>dirt</en>
+			<de>Erde</de>
+		</text>
+		<text name="KIES">
+			<en>gravel</en>
+			<de>Kies</de>
+		</text>
+		<text name="APFEL">
+			<en>apple</en>
+			<de>Apfel</de>
+		</text>
+		<text name="KIRSCHE">
+			<en>cherry</en>
+			<de>Kirsche</de>
+		</text>
+		<text name="PFLAUME">
+			<en>plum</en>
+			<de>Pflaume</de>
+		</text>
+		<text name="BIRNE">
+			<en>pear</en>
+			<de>Birne</de>
+		</text>
+		<text name="BEETPULP">
+			<en>beetPulp</en>
+			<de>Rübenschnitzel</de>
+		</text>
+		<text name="LEERPALLET">
+			<en>emptypallet</en>
+			<de>LeerPalette</de>
+		</text>
+		<text name="BRETTERPALLET">
+			<en>boardwoodpallet</en>
+			<de>BretterPallette</de>
+		</text>
+		<text name="MALZ">
+			<en>malt</en>
+			<de>Malz</de>
+		</text>
+		<text name="BIERKASTEN">
+			<en>bierbox</en>
+			<de>Bierkasten</de>
+		</text>
+		<text name="BIERFASS">
+			<en>bierbarrel</en>
+			<de>Bierfass</de>
+		</text>
+		<text name="PAPIER">
+			<en>paper</en>
+			<de>Papier</de>
+		</text>
+		<text name="KARTON">
+			<en>carton</en>
+			<de>Karton</de>
 		</text>
 	</l10n>
 </mapconfig>

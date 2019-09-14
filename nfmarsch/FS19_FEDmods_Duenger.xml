@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Duenger">
-			<de>Düngerherstellung</de>
-		</text>
-		<text name="OP_FERTILIZER">
-			<de>Dünger</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Duengerherstellung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_LIQUID" capacity="150000" fillTypes="LIQUIDMANURE DIGESTATE" useSellPointPrice="LIQUIDMANURE" purchaseMultiplier="2.0"/>
+        <inputProduct name="IP_MANURE" capacity="150000" fillTypes="MANURE COMPOST" useSellPointPrice="MANURE" purchaseMultiplier="7.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_FERTILIZER" fillType="FERTILIZER" capacity="150000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="3000">
+          <inputs>
+            <inputProduct name="IP_LIQUID" percent="50"/>
+            <inputProduct name="IP_MANURE" percent="50"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_FERTILIZER" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Duengerherstellung">
+      <de>Düngerherstellung</de>
+      <en>Fertilizer production</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Gülle / Gärreste</de>
+      <en>Slurry / Digestate</en>
+    </text>
+    <text name="IP_MANURE">
+      <de>Mist / Kompost</de>
+      <en>Manure / Compost</en>
+    </text>
+    <text name="OP_FERTILIZER">
+      <de>Dünger</de>
+      <en>Fertilizer</en>
+    </text>
+  </l10n>
 </mapconfig>

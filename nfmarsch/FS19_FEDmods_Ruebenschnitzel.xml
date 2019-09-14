@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Ruebenschnitzel">
-			<de>Rübenschnitzel</de>
-		</text>
-		<text name="OP_BEETPULP">
-			<de>Rübenschnitzel</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Ruebenschnitzel" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_BEET" capacity="800000" fillTypes="SUGARBEET" useSellPointPrice="SUGARBEET" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_LIQUID" capacity="25000" fillTypes="DIESEL" useSellPointPrice="DIESEL" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_BEETPULP" fillType="BEETPULP" capacity="800000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="12000">
+          <inputs>
+            <inputProduct name="IP_BEET" percent="100"/>
+            <inputProduct name="IP_LIQUID" percent="3"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_BEETPULP" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Ruebenschnitzel">
+      <de>Rübenschnitzel</de>
+      <en>Beet Pulp</en>
+    </text>
+    <text name="IP_BEET">
+      <de>Zuckerrüben</de>
+      <en>Sugarbeet</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+    <text name="OP_BEETPULP">
+      <de>Rübenschnitzel</de>
+      <en>beetPulp</en>
+    </text>
+  </l10n>
 </mapconfig>

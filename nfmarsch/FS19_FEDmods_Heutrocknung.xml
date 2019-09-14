@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Heutrocknung">
-			<de>Heutrocknung</de>
-		</text>
-		<text name="OP_DRYGRASS">
-			<de>Heu</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Heutrocknung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_GRASS" capacity="1000000" fillTypes="GRASS_WINDROW" useSellPointPrice="GRASS_WINDROW" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_DIESEL" capacity="100000" fillTypes="DIESEL" useSellPointPrice="DIESEL" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_DRYGRASS" fillType="DRYGRASS_WINDROW" capacity="1000000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="15000">
+          <inputs>
+            <inputProduct name="IP_GRASS" percent="100"/>
+            <inputProduct name="IP_DIESEL" percent="2"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_DRYGRASS" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Heutrocknung">
+      <de>Heutrocknung</de>
+      <en>Grassdryer</en>
+    </text>
+    <text name="IP_GRASS">
+      <de>Gras</de>
+      <en>Grass</en>
+    </text>
+    <text name="IP_DIESEL">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+    <text name="OP_DRYGRASS">
+      <de>Heu</de>
+      <en>Hay</en>
+    </text>
+  </l10n>
 </mapconfig>

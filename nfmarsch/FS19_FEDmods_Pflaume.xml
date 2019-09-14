@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="pflaumePallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Pflaume">
-			<de>Pflaumenplantage</de>
-		</text>
-		<text name="PFLAUME">
-			<de>Pflaume</de>
-		</text>
-		<text name="OP_PFLAUME">
-			<de>Pflaume</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Pflaume" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_COMPOST" capacity="200000" fillTypes="COMPOST" fixedPricePerLitre="1.5"/>
+        <inputProduct name="IP_FERTILIZER" capacity="200000" fillTypes="FERTILIZER" fixedPricePerLitre="1"/>
+        <inputProduct name="IP_LIQUID" capacity="200000" fillTypes="WATER" fixedPricePerLitre="0.1"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_PFLAUME" fillType="PFLAUME" capacity="200000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="1500">
+          <inputs>
+            <inputProduct name="IP_COMPOST" percent="50"/>
+            <inputProduct name="IP_FERTILIZER" percent="4"/>
+            <inputProduct name="IP_LIQUID" percent="50"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_PFLAUME" percent="110"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Pflaume">
+      <de>Pflaumenplantage</de>
+      <en>Plum orchard</en>
+    </text>
+    <text name="IP_COMPOST">
+      <de>Kompost</de>
+      <en>compost</en>
+    </text>
+    <text name="IP_FERTILIZER">
+      <de>Dünger</de>
+      <en>fertilizer</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>water</en>
+    </text>
+    <text name="OP_PFLAUME">
+      <de>Pflaumen</de>
+      <en>plum</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>pflaumePallet</pallet>
+  </pallets>
 </mapconfig>

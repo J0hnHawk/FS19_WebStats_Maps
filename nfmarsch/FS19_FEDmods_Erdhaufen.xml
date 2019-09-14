@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Erdhaufen">
-			<de>Erdhaufen</de>
-		</text>
-		<text name="OP_ERDE">
-			<de>Erde</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Erde" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_DIESEL" capacity="500000" fillTypes="DIESEL" useSellPointPrice="DIESEL" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_ERDE" fillType="ERDE" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="18000">
+          <inputs>
+            <inputProduct name="IP_DIESEL" percent="3"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_ERDE" percent="600"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Erde">
+      <de>Erdhaufen</de>
+      <en>Earth Heap</en>
+    </text>
+    <text name="IP_DIESEL">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+    <text name="OP_ERDE">
+      <de>Erde</de>
+      <en>dirt</en>
+    </text>
+  </l10n>
 </mapconfig>

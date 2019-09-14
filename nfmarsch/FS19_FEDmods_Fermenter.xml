@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Fermenter">
-			<de>Fermenter</de>
-		</text>
-		<text name="OP_SILAGE">
-			<de>Silage</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Fermenter" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_CHAFFGRASS" capacity="1000000" fillTypes="CHAFF GRASS_WINDROW" useSellPointPrice="GRASS_WINDROW" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_SILAGE" fillType="SILAGE" capacity="1000000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="15000">
+          <inputs>
+            <inputProduct name="IP_CHAFFGRASS" percent="100"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_SILAGE" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Fermenter">
+      <de>Fermenter</de>
+      <en>Fermenting Silo</en>
+    </text>
+    <text name="IP_CHAFFGRASS">
+      <de>Häckselgut / Gras</de>
+      <en>Chaff / Grass</en>
+    </text>
+    <text name="OP_SILAGE">
+      <de>Silage</de>
+      <en>Silage</en>
+    </text>
+  </l10n>
 </mapconfig>

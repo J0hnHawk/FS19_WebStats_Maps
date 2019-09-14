@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Mischfutter">
-			<de>Mischfutterherstellung</de>
-		</text>
-		<text name="OP_FORAGE">
-			<de>Mischration</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Mischfutterherstellung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_DRYGRASS" capacity="500000" fillTypes="DRYGRASS_WINDROW" useSellPointPrice="DRYGRASS_WINDROW" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_STRAW" capacity="500000" fillTypes="STRAW" useSellPointPrice="STRAW" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_SILAGE" capacity="500000" fillTypes="SILAGE" useSellPointPrice="SILAGE" purchaseMultiplier="6.5"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_FORAGE" fillType="FORAGE" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="10000">
+          <inputs>
+            <inputProduct name="IP_DRYGRASS" percent="50"/>
+            <inputProduct name="IP_STRAW" percent="25"/>
+            <inputProduct name="IP_SILAGE" percent="25"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_FORAGE" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Mischfutterherstellung">
+      <de>Mischfutterherstellung</de>
+      <en>Forage Production</en>
+    </text>
+    <text name="IP_DRYGRASS">
+      <de>Heu</de>
+      <en>Hay</en>
+    </text>
+    <text name="IP_STRAW">
+      <de>Stroh</de>
+      <en>Straw</en>
+    </text>
+    <text name="IP_SILAGE">
+      <de>Silage</de>
+      <en>Silage</en>
+    </text>
+    <text name="OP_FORAGE">
+      <de>Mischfutter</de>
+      <en>Forage</en>
+    </text>
+  </l10n>
 </mapconfig>

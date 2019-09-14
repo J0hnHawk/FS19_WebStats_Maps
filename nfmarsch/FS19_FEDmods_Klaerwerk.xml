@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Klaerwerk">
-			<de>Klärwerk</de>
-		</text>
-		<text name="OP_WATER">
-			<de>Wasser</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Klaerwerk" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_LIQUID" capacity="1000000" fillTypes="LIQUIDMANURE DIGESTATE" useSellPointPrice="DIGESTATE" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_WATER" fillType="WATER" capacity="1000000"/>
+        <outputProduct name="OP_COMPOST" fillType="COMPOST" capacity="1000000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="20000">
+          <inputs>
+            <inputProduct name="IP_LIQUID" percent="100"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_WATER" percent="70"/>
+            <outputProduct name="OP_COMPOST" percent="30"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Klaerwerk">
+      <de>Klärwerk</de>
+      <en>Sewage Treatment Plant</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Gülle/Gärreste</de>
+      <en>Liquid manure/Digestate</en>
+    </text>
+    <text name="OP_WATER">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="OP_COMPOST">
+      <de>Kompost</de>
+      <en>Compost</en>
+    </text>
+  </l10n>
 </mapconfig>

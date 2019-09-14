@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Komposter">
-			<de>Komposter</de>
-		</text>
-		<text name="OP_COMPOST">
-			<de>Kompost</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Komposter" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_ORGANIC" capacity="350000" fillTypes="DRYGRASS_WINDROW GRASS_WINDROW MANURE WOODCHIPS CHAFF STRAW" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_LIQUID" capacity="25000" fillTypes="DIESEL" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_COMPOST" fillType="COMPOST" capacity="350000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="10000">
+          <inputs>
+            <inputProduct name="IP_ORGANIC" percent="100"/>
+            <inputProduct name="IP_LIQUID" percent="3"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_COMPOST" percent="95"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Komposter">
+      <de>Komposter</de>
+      <en>Compost Factory</en>
+    </text>
+    <text name="IP_ORGANIC">
+      <de>Organisches</de>
+      <en>organic</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Diesel</de>
+      <en>diesel</en>
+    </text>
+    <text name="OP_COMPOST">
+      <de>Kompost</de>
+      <en>Compost</en>
+    </text>
+  </l10n>
 </mapconfig>

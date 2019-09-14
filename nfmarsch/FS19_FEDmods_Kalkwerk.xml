@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Kalkwerk">
-			<de>Kalkwerk</de>
-		</text>
-		<text name="OP_LIME">
-			<de>Kalk</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Kalkwerk" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_WATER" capacity="500000" fillTypes="WATER" useSellPointPrice="WATER" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_DIESEL" capacity="500000" fillTypes="DIESEL" useSellPointPrice="DIESEL" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_LIME" fillType="LIME" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="12000">
+          <inputs>
+            <inputProduct name="IP_WATER" percent="100"/>
+            <inputProduct name="IP_DIESEL" percent="2"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_LIME" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Kalkwerk">
+      <de>Kalkwerk</de>
+      <en>Lime Production</en>
+    </text>
+    <text name="IP_WATER">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_DIESEL">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+    <text name="OP_LIME">
+      <de>Kalk</de>
+      <en>Lime</en>
+    </text>
+  </l10n>
 </mapconfig>

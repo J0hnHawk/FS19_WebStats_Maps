@@ -1,27 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="bretterPallet" />
-		<pallet name="leerPallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Saegewerk">
-			<de>Sägewerk</de>
-		</text>
-		<text name="BRETTERPALLET">
-			<de>Bretterpalette</de>
-		</text>
-		<text name="OP_BRETTERPALLET">
-			<de>Bretterpalette</de>
-		</text>
-		<text name="LEERPALLET">
-			<de>Leerpalette</de>
-		</text>
-		<text name="OP_LEERPALLET">
-			<de>Leerpalette</de>
-		</text>
-		<text name="OP_WOODCHIPS">
-			<de>Hackschnitzel</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Saegewerk" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_WOOD" capacity="800000" fillTypes="WOODCHIPS" fixedPricePerLitre="2.5"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_LEERPALLET" fillType="LEERPALLET" capacity="500000" title="FEDMODS_SAEGEWERK_OUTPUT1"/>
+        <outputProduct name="OP_BRETTERPALLET" fillType="BRETTERPALLET" capacity="500000" title="FEDMODS_SAEGEWERK_OUTPUT2"/>
+        <outputProduct name="OP_WOODCHIPS" fillType="WOODCHIPS" capacity="800000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="8000">
+          <inputs>
+            <inputProduct name="IP_WOOD" percent="100"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_LEERPALLET" percent="85"/>
+            <outputProduct name="OP_WOODCHIPS" percent="30"/>
+          </outputs>
+        </productLine>
+        <productLine outputPerHour="5000">
+          <inputs>
+            <inputProduct name="IP_WOOD" percent="100"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_LEERPALLET" percent="85"/>
+            <outputProduct name="OP_WOODCHIPS" percent="30"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Saegewerk">
+      <de>Sägewerk</de>
+      <en>Sawmill</en>
+    </text>
+    <text name="IP_WOOD">
+      <de>Holz</de>
+      <en>Wood</en>
+    </text>
+    <text name="OP_LEERPALLET">
+      <de>LeerPalette</de>
+      <en>empty pallets</en>
+    </text>
+    <text name="OP_BRETTERPALLET">
+      <de>BretterPallette</de>
+      <en>boards pallets</en>
+    </text>
+    <text name="OP_WOODCHIPS">
+      <de>Hackschnitzel</de>
+      <en>Wood chips</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>leerPallet</pallet>
+    <pallet>bretterPallet</pallet>
+  </pallets>
 </mapconfig>

@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Diesel">
-			<de>Dieselherstellung</de>
-		</text>
-		<text name="OP_DIESEL">
-			<de>Diesel</de>
-		</text>
-		<text name="OP_COMPOST">
-			<de>Kompost</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Dieselherstellung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_CANOLASUNFLOWER" capacity="500000" fillTypes="CANOLA SUNFLOWER" useSellPointPrice="DIESEL" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_COMPOST" fillType="COMPOST" capacity="500000"/>
+        <outputProduct name="OP_DIESEL" fillType="DIESEL" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="9000">
+          <inputs>
+            <inputProduct name="IP_CANOLASUNFLOWER" percent="100"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_COMPOST" percent="90"/>
+            <outputProduct name="OP_DIESEL" percent="75"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Dieselherstellung">
+      <de>Dieselherstellung</de>
+      <en>diesel production</en>
+    </text>
+    <text name="IP_CANOLASUNFLOWER">
+      <de>Raps / Sonnenblumen</de>
+      <en>canola / sunflower</en>
+    </text>
+    <text name="OP_COMPOST">
+      <de>Kompost</de>
+      <en>Compost</en>
+    </text>
+    <text name="OP_DIESEL">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+  </l10n>
 </mapconfig>

@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="mehlPallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Mehlfabrik">
-			<de>Mehlfabrik</de>
-		</text>
-		<text name="MEHL">
-			<de>Mehl</de>
-		</text>
-		<text name="OP_MEHL">
-			<de>Mehl</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Mehlfabrik" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_GRAIN" capacity="350000" fillTypes="WHEAT BARLEY RYE SPELT TRITICALE" fixedPricePerLitre="1.8"/>
+        <inputProduct name="IP_PALLET" capacity="90000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_MEHL" fillType="MEHL" capacity="350000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="6000">
+          <inputs>
+            <inputProduct name="IP_GRAIN" percent="100"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_MEHL" percent="90"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Mehlfabrik">
+      <de>Mehlfabrik</de>
+      <en>Flour Factory</en>
+    </text>
+    <text name="IP_GRAIN">
+      <de>Getreide</de>
+      <en>Grain</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>Empty Pallet</en>
+    </text>
+    <text name="OP_MEHL">
+      <de>Mehl</de>
+      <en>Flour</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>mehlPallet</pallet>
+  </pallets>
 </mapconfig>

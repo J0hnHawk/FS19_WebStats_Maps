@@ -1,17 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="pelletPallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Pellets">
-			<de>Pelletfabrik</de>
-		</text>
-		<text name="PELLETS">
-			<de>Pellets</de>
-		</text>
-		<text name="OP_PELLETS">
-			<de>Pellets</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Pellets" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_BULK" capacity="1000000" fillTypes="STRAW WOODCHIPS" useSellPointPrice="PELLETS" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_PALLET" capacity="120000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_PELLETS" fillType="PELLETS" capacity="1000000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="6000">
+          <inputs>
+            <inputProduct name="IP_BULK" percent="100"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_PELLETS" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Pellets">
+      <de>Pelletfabrik</de>
+      <en>Pellets Production</en>
+    </text>
+    <text name="IP_BULK">
+      <de>Stroh/Hackschnitzel</de>
+      <en>Straw/Wood Chips</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>Empty Pallet</en>
+    </text>
+    <text name="OP_PELLETS">
+      <de>pellets</de>
+      <en>Pellets</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>pelletPallet</pallet>
+  </pallets>
 </mapconfig>

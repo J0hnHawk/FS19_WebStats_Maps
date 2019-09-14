@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_FluessigDuenger">
-			<de>Flüssigkeitsdüngerherstellung</de>
-		</text>
-		<text name="OP_LFERTILIZER">
-			<de>Flüssigdünger</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_FluessigDuengerherstellung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_WATER" capacity="150000" fillTypes="WATER" useSellPointPrice="WATER" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_FERTILIZER" capacity="150000" fillTypes="FERTILIZER" useSellPointPrice="FERTILIZER" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_LFERTILIZER" fillType="LIQUIDFERTILIZER" capacity="150000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="3000">
+          <inputs>
+            <inputProduct name="IP_WATER" percent="75"/>
+            <inputProduct name="IP_FERTILIZER" percent="25"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_LFERTILIZER" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_FluessigDuengerherstellung">
+      <de>Flüssigdünger herstellung</de>
+      <en>Liquid fertilizer production</en>
+    </text>
+    <text name="IP_WATER">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_FERTILIZER">
+      <de>Dünger</de>
+      <en>Fertilizer</en>
+    </text>
+    <text name="OP_LFERTILIZER">
+      <de>Flüssigdünger</de>
+      <en>Liquid fertilizer</en>
+    </text>
+  </l10n>
 </mapconfig>

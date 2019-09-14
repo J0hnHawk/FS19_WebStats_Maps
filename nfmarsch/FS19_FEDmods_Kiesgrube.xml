@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Kiesgrube">
-			<de>Kiesgrube</de>
-		</text>
-		<text name="OP_KIES">
-			<de>Kies</de>
-		</text>
-		<text name="OP_SAND">
-			<de>Sand</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Kiesgrube" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_DIESEL" capacity="100000" fillTypes="DIESEL" fixedPricePerLitre="2.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_KIES" fillType="KIES" capacity="1500000" title="FEDMODS_KIESGRUBE_OUTPUT1"/>
+        <outputProduct name="OP_SAND" fillType="SAND" capacity="1500000" title="FEDMODS_KIESGRUBE_OUTPUT2"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="18000">
+          <inputs>
+            <inputProduct name="IP_DIESEL" percent="2"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_KIES" percent="200"/>
+            <outputProduct name="OP_SAND" percent="200"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Kiesgrube">
+      <de>Kiesgrube</de>
+      <en>gravel pit</en>
+    </text>
+    <text name="IP_DIESEL">
+      <de>Diesel</de>
+      <en>Diesel</en>
+    </text>
+    <text name="OP_KIES">
+      <de>Kies</de>
+      <en>Gravel</en>
+    </text>
+    <text name="OP_SAND">
+      <de>Sand</de>
+      <en>Sand</en>
+    </text>
+  </l10n>
 </mapconfig>

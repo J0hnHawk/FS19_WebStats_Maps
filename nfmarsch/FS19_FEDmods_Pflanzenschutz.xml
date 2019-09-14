@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Pflanzenschutz">
-			<de>Pflanzenschutzmittel</de>
-		</text>
-		<text name="OP_HERBICIDE">
-			<de>Pflanzenschutzmittel</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Pflanzenschutz" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_WATER" capacity="200000" fillTypes="WATER" useSellPointPrice="WATER" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_TOBACCO" capacity="200000" fillTypes="TOBACCO" useSellPointPrice="TOBACCO" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_LIME" capacity="200000" fillTypes="LIME" useSellPointPrice="LIME" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_COMPOST" fillType="COMPOST" capacity="200000"/>
+        <outputProduct name="OP_HERBICIDE" fillType="HERBICIDE" capacity="200000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="9000">
+          <inputs>
+            <inputProduct name="IP_WATER" percent="60"/>
+            <inputProduct name="IP_TOBACCO" percent="30"/>
+            <inputProduct name="IP_LIME" percent="10"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_HERBICIDE" percent="80"/>
+            <outputProduct name="OP_COMPOST" percent="20"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Pflanzenschutz">
+      <de>Pflanzenschutzmittel</de>
+      <en>Herbicide Production</en>
+    </text>
+    <text name="IP_WATER">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_TOBACCO">
+      <de>Tabak</de>
+      <en>Tobacco</en>
+    </text>
+    <text name="IP_LIME">
+      <de>Kalk</de>
+      <en>Lime</en>
+    </text>
+    <text name="OP_COMPOST">
+      <de>missing</de>
+      <en>missing</en>
+    </text>
+    <text name="OP_HERBICIDE">
+      <de>Pflanzenschutzmittel</de>
+      <en>Herbicide</en>
+    </text>
+  </l10n>
 </mapconfig>

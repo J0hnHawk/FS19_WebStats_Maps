@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="zuckerPallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Zucker">
-			<de>Zuckerfabrik</de>
-		</text>
-		<text name="ZUCKER">
-			<de>Zucker</de>
-		</text>
-		<text name="OP_ZUCKER">
-			<de>Zucker</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Zucker" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_SUGAR" capacity="1000000" fillTypes="SUGARBEET SUGARCANE" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_LIQUID" capacity="1000000" fillTypes="WATER" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_PALLET" capacity="100000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_ZUCKER" fillType="ZUCKER" capacity="1000000"/>
+        <outputProduct name="OP_COMPOST" fillType="COMPOST" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="7000">
+          <inputs>
+            <inputProduct name="IP_SUGAR" percent="90"/>
+            <inputProduct name="IP_LIQUID" percent="10"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_ZUCKER" percent="40"/>
+            <outputProduct name="OP_COMPOST" percent="60"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Zucker">
+      <de>Zuckerfabrik</de>
+      <en>Sugar Production</en>
+    </text>
+    <text name="IP_SUGAR">
+      <de>Zuckerüben / Zuckerrohr</de>
+      <en>sugarBeet / sugarCane</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>Empty Pallet</en>
+    </text>
+    <text name="OP_ZUCKER">
+      <de>Zucker</de>
+      <en>sugar</en>
+    </text>
+    <text name="OP_COMPOST">
+      <de>Kompost</de>
+      <en>Compost</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>zuckerPallet</pallet>
+  </pallets>
 </mapconfig>

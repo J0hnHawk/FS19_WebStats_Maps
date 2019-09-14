@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+  <objects>
+    <object name="FS19_Zellstoff" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_woodchips" capacity="500000" fillTypes="WOODCHIPS" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_LIQUID" capacity="500000" fillTypes="WATER" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_PALLET" capacity="125000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_PAPIER" fillType="PAPIER" capacity="500000"/>
+        <outputProduct name="OP_KARTON" fillType="KARTON" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="6000">
+          <inputs>
+            <inputProduct name="IP_WOODCHIPS" percent="50"/>
+            <inputProduct name="IP_LIQUID" percent="30"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_PAPIER" percent="100"/>
+          </outputs>
+        </productLine>
+        <productLine outputPerHour="6000">
+          <inputs>
+            <inputProduct name="IP_WOODCHIPS" percent="50"/>
+            <inputProduct name="IP_LIQUID" percent="30"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_PAPIER" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Zellstoff">
+      <de>Zellstofffabrik</de>
+      <en>Paper and Carton Production</en>
+    </text>
+    <text name="IP_woodchips">
+      <de>Hackschnitzel</de>
+      <en>Woodchips</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>Empty Pallet</en>
+    </text>
+    <text name="OP_PAPIER">
+      <de>Papierpalette</de>
+      <en>paperpallet</en>
+    </text>
+    <text name="OP_KARTON">
+      <de>Kartonpalette</de>
+      <en>cartonpallet</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>papierPallet</pallet>
+    <pallet>kartonPallet</pallet>
+  </pallets>
+</mapconfig>

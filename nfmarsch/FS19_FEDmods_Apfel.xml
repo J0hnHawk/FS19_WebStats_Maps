@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<pallets>
-		<pallet name="apfelPallet" />
-	</pallets>
-	<l10n>
-		<text name="FS19_FEDmods_Apfel">
-			<de>Apfelplantage</de>
-		</text>
-		<text name="APFEL">
-			<de>Apfel</de>
-		</text>
-		<text name="OP_APFEL">
-			<de>Apfel</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Apfel" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_COMPOST" capacity="200000" fillTypes="COMPOST" fixedPricePerLitre="1.5"/>
+        <inputProduct name="IP_FERTILIZER" capacity="200000" fillTypes="FERTILIZER" fixedPricePerLitre="1"/>
+        <inputProduct name="IP_LIQUID" capacity="200000" fillTypes="WATER" fixedPricePerLitre="0.1"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_APFEL" fillType="APFEL" capacity="200000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="1500">
+          <inputs>
+            <inputProduct name="IP_COMPOST" percent="50"/>
+            <inputProduct name="IP_FERTILIZER" percent="4"/>
+            <inputProduct name="IP_LIQUID" percent="50"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_APFEL" percent="110"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Apfel">
+      <de>Apfelplantage</de>
+      <en>Apple orchard</en>
+    </text>
+    <text name="IP_COMPOST">
+      <de>Kompost</de>
+      <en>compost</en>
+    </text>
+    <text name="IP_FERTILIZER">
+      <de>Dünger</de>
+      <en>fertilizer</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>water</en>
+    </text>
+    <text name="OP_APFEL">
+      <de>Apfel</de>
+      <en>Apple</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>apfelPallet</pallet>
+  </pallets>
 </mapconfig>

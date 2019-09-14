@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+  <objects>
+    <object name="FS19_Malz" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_wheat_barley" capacity="500000" fillTypes="WHEAT BARLEY" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_LIQUID" capacity="500000" fillTypes="WATER" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_PALLET" capacity="100000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_MALZ" fillType="MALZ" capacity="500000"/>
+        <outputProduct name="OP_PIGFOOD" fillType="PIGFOOD" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="5000">
+          <inputs>
+            <inputProduct name="IP_WHEAT_BARLEY" percent="90"/>
+            <inputProduct name="IP_LIQUID" percent="10"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_MALZ" percent="70"/>
+            <outputProduct name="OP_PIGFOOD" percent="30"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Malz">
+      <de>Malzfabrik</de>
+      <en>Malt Production</en>
+    </text>
+    <text name="IP_wheat_barley">
+      <de>Weizen / Gerste</de>
+      <en>wheat / barley</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>Empty Pallet</en>
+    </text>
+    <text name="OP_MALZ">
+      <de>Malz</de>
+      <en>Malt</en>
+    </text>
+    <text name="OP_PIGFOOD">
+      <de>Schweinefutter</de>
+      <en>Pigfood</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>malzPallet</pallet>
+  </pallets>
+</mapconfig>

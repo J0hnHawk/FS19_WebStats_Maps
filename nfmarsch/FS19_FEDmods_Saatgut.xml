@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Saatgut">
-			<de>Saatgutherstellung</de>
-		</text>
-		<text name="OP_SEEDS">
-			<de>Saatgut</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Saatgutherstellung" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_BULK" capacity="250000" fillTypes="WHEAT BARLEY OAT SPELT MILLET MAIZE RYE TRITICALE" useSellPointPrice="SPELT" purchaseMultiplier="1.0"/>
+        <inputProduct name="IP_FERTILIZER" capacity="250000" fillTypes="FERTILIZER" useSellPointPrice="FERTILIZER" purchaseMultiplier="1.0"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_SEEDS" fillType="SEEDS" capacity="250000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="3000">
+          <inputs>
+            <inputProduct name="IP_BULK" percent="75"/>
+            <inputProduct name="IP_FERTILIZER" percent="25"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_SEEDS" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Saatgutherstellung">
+      <de>Saatgutherstellung</de>
+      <en>Seed Maker</en>
+    </text>
+    <text name="IP_BULK">
+      <de>Getreide</de>
+      <en>Grain</en>
+    </text>
+    <text name="IP_FERTILIZER">
+      <de>Dünger</de>
+      <en>Fertilizer</en>
+    </text>
+    <text name="OP_SEEDS">
+      <de>Saatgut</de>
+      <en>Seeds</en>
+    </text>
+  </l10n>
 </mapconfig>

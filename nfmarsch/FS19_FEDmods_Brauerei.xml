@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapconfig>
+  <objects>
+    <object name="FS19_Brauerei" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_wheat" capacity="500000" fillTypes="WHEAT" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_barley" capacity="500000" fillTypes="BARLEY" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_hops" capacity="500000" fillTypes="HOPS" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_malz" capacity="200000" fillTypes="MALZ" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_LIQUID" capacity="500000" fillTypes="WATER" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_PALLET" capacity="175000" fillTypes="LEERPALLET" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_BIERKASTEN" fillType="BIERKASTEN" capacity="500000"/>
+        <outputProduct name="OP_BIERFASS" fillType="BIERFASS" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="5000">
+          <inputs>
+            <inputProduct name="IP_BARLEY" percent="40"/>
+            <inputProduct name="IP_HOPS" percent="40"/>
+            <inputProduct name="IP_MALZ" percent="10"/>
+            <inputProduct name="IP_LIQUID" percent="50"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_BIERKASTEN" percent="100"/>
+          </outputs>
+        </productLine>
+        <productLine outputPerHour="5000">
+          <inputs>
+            <inputProduct name="IP_BARLEY" percent="40"/>
+            <inputProduct name="IP_HOPS" percent="40"/>
+            <inputProduct name="IP_MALZ" percent="10"/>
+            <inputProduct name="IP_LIQUID" percent="50"/>
+            <inputProduct name="IP_PALLET" percent="5"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_BIERKASTEN" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Brauerei">
+      <de>Brauerei</de>
+      <en>brewery</en>
+    </text>
+    <text name="IP_wheat">
+      <de>Weizen</de>
+      <en>Wheat</en>
+    </text>
+    <text name="IP_barley">
+      <de>Gerste</de>
+      <en>Barley</en>
+    </text>
+    <text name="IP_hops">
+      <de>Hopfen</de>
+      <en>Hops</en>
+    </text>
+    <text name="IP_malz">
+      <de>Malz</de>
+      <en>Malt</en>
+    </text>
+    <text name="IP_LIQUID">
+      <de>Wasser</de>
+      <en>Water</en>
+    </text>
+    <text name="IP_PALLET">
+      <de>Leerpaletten</de>
+      <en>emptyPallet</en>
+    </text>
+    <text name="OP_BIERKASTEN">
+      <de>Bierkasten</de>
+      <en>Beerbox</en>
+    </text>
+    <text name="OP_BIERFASS">
+      <de>Bierfass</de>
+      <en>Beerbarrel</en>
+    </text>
+  </l10n>
+  <pallets>
+    <pallet>bierkastenPallet</pallet>
+    <pallet>bierfassPallet</pallet>
+  </pallets>
+</mapconfig>

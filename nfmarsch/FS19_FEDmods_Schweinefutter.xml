@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapconfig>
-	<l10n>
-		<text name="FS19_FEDmods_Schweinefutter">
-			<de>Schweinefutter</de>
-		</text>
-		<text name="OP_PIGFOOD">
-			<de>Schweinefutter</de>
-		</text>
-	</l10n>
+  <objects>
+    <object name="FS19_Schweinefutter" locationType="GlobalCompany" showInProduction="true" canPurchaseInputs="true">
+      <inputProducts>
+        <inputProduct name="IP_EARTH" capacity="500000" fillTypes="SUGARBEET POTATO ONION CARROT" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_MAIZE" capacity="500000" fillTypes="MAIZE" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_GRAIN" capacity="500000" fillTypes="WHEAT BARLEY OAT RYE SPELT TRITICALE" fixedPricePerLitre="1.6"/>
+        <inputProduct name="IP_PROTEIN" capacity="500000" fillTypes="CANOLA SUNFLOWER SOYBEAN" fixedPricePerLitre="1.6"/>
+      </inputProducts>
+      <outputProducts>
+        <outputProduct name="OP_PIGFOOD" fillType="PIGFOOD" capacity="500000"/>
+      </outputProducts>
+      <productLines>
+        <productLine outputPerHour="6000">
+          <inputs>
+            <inputProduct name="IP_EARTH" percent="30"/>
+            <inputProduct name="IP_MAIZE" percent="30"/>
+            <inputProduct name="IP_GRAIN" percent="20"/>
+            <inputProduct name="IP_PROTEIN" percent="20"/>
+          </inputs>
+          <outputs>
+            <outputProduct name="OP_PIGFOOD" percent="100"/>
+          </outputs>
+        </productLine>
+      </productLines>
+    </object>
+  </objects>
+  <l10n>
+    <text name="FS19_Schweinefutter">
+      <de>Schweinefutter</de>
+      <en>pig food Factory</en>
+    </text>
+    <text name="IP_EARTH">
+      <de>Erdfrüchte</de>
+      <en>beet, potato</en>
+    </text>
+    <text name="IP_MAIZE">
+      <de>Körnermais</de>
+      <en>maize</en>
+    </text>
+    <text name="IP_GRAIN">
+      <de>Getreide</de>
+      <en>Grain</en>
+    </text>
+    <text name="IP_PROTEIN">
+      <de>Proteine</de>
+      <en>protein</en>
+    </text>
+    <text name="OP_PIGFOOD">
+      <de>Schweinefutter</de>
+      <en>Pigfood</en>
+    </text>
+  </l10n>
 </mapconfig>
